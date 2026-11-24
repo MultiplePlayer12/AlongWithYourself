@@ -1,0 +1,80 @@
+# =====================================================================
+#  Unreal Engine 5.7 项目 .gitignore
+#  原则：只跟踪「无法由代码/引擎重新生成」的工程文件
+#        （源码、配置、资产、uproject），其余全部忽略。
+# =====================================================================
+
+# ---------------------------------------------------------------- 编译产物
+# Binaries/ 是 UBT 链接出来的 DLL，任何时候都能重新编译得到
+Binaries/
+*.dll
+*.exe
+*.lib
+*.pdb
+*.obj
+*.o
+*.dep
+
+# ------------------------------------------------------------ 中间文件/缓存
+# Intermediate/ 存放 UHT 生成代码、rsp 响应文件、临时 obj，可完全重建
+Intermediate/
+# 项目内 DDC（本项目已显式指到 E:/UE_DDC，这里是历史残留）
+DerivedDataCache/
+*.udd
+*.udh
+
+# Saved/ 是日志、崩溃转储、自动保存、截图、着色器缓存
+Saved/
+*.log
+*.slog
+*.bak
+*.tmp
+*.autosave
+
+# 按「每个使用者」自动生成的编辑器状态（如上次选中的内容浏览器目录），不该共享
+Config/DefaultEditorPerProjectUserSettings.ini
+
+# ---------------------------------------------------------- IDE / 编辑器
+# Visual Studio：.vs 是 IntelliSense 数据库，.sln/.suo 由 UBT 重新生成
+.vs/
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.VC.VC.opendb
+*.user
+*.rsuser
+
+# Rider / CLion
+.idea/
+*.iml
+
+# Visual Studio Code：只保留 C++ 学习环境需要的 4 个配置文件
+.vscode/*
+!.vscode/c_cpp_properties.json
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# ---------------------------------------------------------- 本机环境/杂项
+# 本目录是本地 AI 助手的工作记录，不属于工程本体
+.workbuddy/
+# 操作系统生成
+.DS_Store
+Thumbs.db
+desktop.ini
+# 日志与临时输出
+*.log
+*.pid
+*.stackdump
+
+# ------------------------------------------------------------ 明确要保留
+# （放在最后，确保上面的通配规则不会误伤；目录用 !目录/ 形式）
+!Source/
+!Config/
+!Content/
+!Plugins/
+!*.uproject

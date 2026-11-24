@@ -1,0 +1,24 @@
+{
+  "files.associations": {
+    "*.uproject": "jsonc",
+    "*.uplugin": "jsonc"
+  },
+  "files.exclude": {
+    "**/.vs": true,
+    "**/Binaries": true,
+    "**/DerivedDataCache": true,
+    "**/Intermediate": true,
+    "**/Saved": true
+  },
+  "search.exclude": {
+    "**/.vs": true,
+    "**/Binaries": true,
+    "**/DerivedDataCache": true,
+    "**/Intermediate": true,
+    "**/Saved": true
+  },
+  "C_Cpp.default.intelliSenseMode": "windows-msvc-x64",
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.errorSquiggles": "enabled",
+  "C_Cpp.intelliSenseEngineFallback": "disabled"
+}

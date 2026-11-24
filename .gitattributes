@@ -1,0 +1,28 @@
+# =====================================================================
+#  保护二进制资产：禁止 Git 做换行符转换与文本 diff
+#  否则 core.autocrlf=true 时可能把 .uasset/.umap 当文本改写，导致资产损坏
+# =====================================================================
+
+*.uasset  -text -diff
+*.umap    -text -diff
+*.ubulk   -text -diff
+*.uexp    -text -diff
+*.upk     -text -diff
+*.pak     -text -diff
+*.png     -text -diff
+*.jpg     -text -diff
+*.tga     -text -diff
+*.exr     -text -diff
+*.wav     -text -diff
+*.fbx     -text -diff
+*.dll     -text -diff
+*.exe     -text -diff
+*.lib     -text -diff
+
+# 源码与配置按文本处理，仓库内统一存储为 LF
+*.h         text eol=lf
+*.cpp       text eol=lf
+*.cs        text eol=lf
+*.ini       text eol=lf
+*.uproject  text eol=lf
+*.md        text eol=lf
